@@ -1,3 +1,5 @@
+//This code spaghetti and awful. Doesn't run on linux.
+
 #include<iostream>
 #include<iomanip>
 #include<cstdlib>
