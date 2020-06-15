@@ -6,11 +6,13 @@
 #include <sys/stat.h> 
 #include <sys/types.h> 
 #include <unistd.h> 
-#include "aux.h"
+#include "files.h"
 
 using namespace std;
 
-string p = "Player 2";
+pthread_t countScore;
+
+string p = "Player2: ";
 
 int main()
 {
@@ -32,6 +34,8 @@ int main()
             displayBoard();
             cout << "HARD LUCK! You Lost!" << endl;
             close(pipe);
+            pthread_create(&countScore, NULL, writeHighScore, &p);
+            pthread_join(countScore, NULL);
             return 0;
         }
         if (boardArr[0][0] == 'D'){

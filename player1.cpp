@@ -6,11 +6,13 @@
 #include <sys/stat.h> 
 #include <sys/types.h> 
 #include <unistd.h> 
-#include "aux.h"
+#include "files.h"
 
 using namespace std;
 
-string p = "Player 1";
+pthread_t countScore;
+
+string p = "Player1:";
 
 int main()
 {
@@ -33,6 +35,8 @@ int main()
             write(pipe, "LLLLLLLLL", 9);
             cout << "CONGRATULATIONS! You won!" << endl;
             close(pipe);
+            pthread_create(&countScore, NULL, writeHighScore, &p);
+            pthread_join(countScore, NULL);
             return 0;
         }
         if (occupiedPlaces <= 0){
