@@ -1,4 +1,27 @@
-# os-project
-TicTacToe with multiplayer &amp; computer mode on linux.
+# Multiplayer Tic Tac Toe for Linux in cpp
+Multiplayer Tic Tac Toe implemented using named pipes and threads in linux.
 
-Right now game.cpp contains the main structure of the game. A lot is to be added and improved.
+## Requirements
+* Linux
+* C++
+
+## How to run
+1. Open two terminals in the directory containg source code
+2. On first terminal, run this command:
+  ```Bash
+  c++ player1.cpp -lpthread -o p1
+  ```
+3. On second terminal, run this command:
+  ```Bash
+  c++ player2.cpp -lpthread -o p2
+  ```
+4. Again on the first terminal, run this command:
+  ```Bash
+  ./p1.out
+  ```
+5. On second terminal, run this command:
+  ```Bash
+  ./p2.out
+  ```
+6. Game will start, enter the co-ordinates and play.
+  
