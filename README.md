@@ -5,6 +5,12 @@ Multiplayer Tic Tac Toe implemented using named pipes and threads in linux.
 * Linux
 * C++
 
+**Demo**
+
+![Demo](https://github.com/abdulhyie/multiplayer-tictactoe-linux/blob/master/imgs/01.JPG?raw=true)
+
+![Demo](https://github.com/abdulhyie/multiplayer-tictactoe-linux/blob/master/imgs/02.JPG?raw=true)
+
 ## How to run
 1. Open two terminals in the directory containg source code
 2. On first terminal, run this command:
@@ -24,9 +30,4 @@ Multiplayer Tic Tac Toe implemented using named pipes and threads in linux.
   ./p2.out
   ```
 6. Game will start, enter the co-ordinates and play.
-  
-**Demo**
-
-![Demo](https://github.com/abdulhyie/multiplayer-tictactoe-linux/blob/master/imgs/01.JPG?raw=true)
-
-![Demo](https://github.com/abdulhyie/multiplayer-tictactoe-linux/blob/master/imgs/02.JPG?raw=true)
+ 
